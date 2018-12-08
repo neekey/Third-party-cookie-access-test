@@ -27,3 +27,5 @@ Visit `http://firstparty.com:8000`, if you see read in the iframe it means it ha
 Safari is adopping this [Intelligent Tracking Prevention](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/), it blocks thrid party cookie access.
 
 At the moment (2018-12-09) the behavior of Safari 12 does not do exactly like the ITP does. It instead blocks the access by default, but if you visit the third party website directly, then the domain gains the access to its cookes while being embedded as thrid party iframe.
+
+Also the new [Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) does not work correctly for me for Safari 12, whether the third party iframe has access or not, the request using `document.hasStorageAccess()` always return `true`.
